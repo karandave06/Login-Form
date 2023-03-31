@@ -1,0 +1,180 @@
+@import '../../app.scss';
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+
+    .imgbox{
+        position: inherit;
+        height: 100%;
+        width: 50%;
+
+        @include mobile{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // background: linear-gradient(255deg,#e91e63,#03a9f4);
+            background: linear-gradient(255deg,#434343 ,black);
+            z-index: 1;
+            mix-blend-mode: screen;
+        }
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .contentbox{
+        display: flex;
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+
+        @include mobile{
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        }
+
+        .formbox{
+            width: 50%;
+
+            @include mobile{
+                width: 100%;
+                padding: 50px;
+                background: rgb(255 255 255 / 0.8);
+                margin: 50px;
+            }
+
+            h2{
+                color: #e21818;
+                position: relative;
+                font-weight: 600;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+
+                &:after{
+                    position: absolute;
+                    width: 90px;
+                    height: 2px;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    background-color: red;
+
+                    @include mobiles{
+                    width: 40px;
+                       
+                    }
+                }
+
+
+                @include mobiles{
+                    font-size: 12px;
+                }
+            }
+
+            .input{
+                margin-bottom: 20px;
+
+                .form-error{
+
+                    color: red;
+
+                }
+
+                span{
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                    display: inline-block;
+                    color: #080808;
+                    font-weight: 300;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+
+                    @include mobiles{
+                        font-size: 12px;
+                    }
+                }
+                .btn{
+                    background: red;
+                    outline: none;
+                    color: #fff;
+                    font-weight: 500;
+                    cursor: pointer;
+                    transition: 0.4s ease-in-out;
+                    text-align: center;
+
+
+                    @include mobiles{
+                        font-size: 12px;
+                    }
+
+
+                    &:hover{
+                        background-color: white;
+                        outline: red;
+                        color: black;
+                    }
+
+                }
+                
+                input{
+                    width: 100%;
+                    padding: 10px 20px;
+                    outline: none;
+                    border: 1px solid red;
+                    letter-spacing: 1px;
+                    color: #607d8b;
+                    background: transparent;
+                    border-radius: 30px;
+                    font-size: 16px;
+
+                    
+                    
+                }
+
+                p{
+                    color: black;
+                    @include mobiles{
+                        font-size: 12px;
+                    }
+
+                    a{
+                        color: red;
+                    }
+                }
+              
+                
+            }
+
+            .remember{
+                margin-bottom: 10px;
+                color: #060607;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}

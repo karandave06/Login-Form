@@ -64,7 +64,7 @@ const Form = () => {
 
     <div className="input">
       <span>Password</span>
-      <input type="text" id='password' name='password' autoComplete='off'
+      <input type="password" id='password' name='password' autoComplete='off'
 
 value={values.password}
         onChange={handleChange}
@@ -76,7 +76,7 @@ value={values.password}
 
      <div className="input">
       <span>Confirm Password</span>
-      <input type="text" id='confirmpassword' name='Conformpassword' autoComplete='off'
+      <input type="password" id='confirmpassword' name='Conformpassword' autoComplete='off'
 
 value={values.Conformpassword}
         onChange={handleChange}
